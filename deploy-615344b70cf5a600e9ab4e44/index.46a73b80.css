@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 61.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+.body-background-color {
+  background-color: #161722;
+}
+.attribution {
+  text-align: center;
+  margin-top: 5rem;
+  font-size: 2rem;
+  color: #25273c;
+}
+.first-container {
+  height: 42vh;
+  background-image: url("bg-desktop-dark.e019d17c.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 550px) {
+  .first-container {
+    background-image: url("bg-mobile-dark.01951f10.jpg");
+  }
+}
+.light-image {
+  background-image: url("bg-desktop-light.ab4100af.jpg");
+}
+@media (max-width: 550px) {
+  .light-image {
+    background-image: url("bg-mobile-light.3608d75a.jpg");
+  }
+}
+.todo-container {
+  padding-top: 6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 35%;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 1100px) {
+  .todo-container {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .todo-container {
+    width: 60%;
+  }
+}
+@media (max-width: 800px) {
+  .todo-container {
+    width: 92%;
+  }
+}
+.todo-container-heading {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  font-weight: 700;
+}
+.form {
+  width: 35%;
+  border-radius: 2px;
+  margin: 0 auto;
+}
+@media (max-width: 1100px) {
+  .form {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .form {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .form {
+    width: 92%;
+  }
+}
+.form_input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  padding: 1.5rem 5rem;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  display: inline-block;
+  height: 5.2rem;
+  transition: all 0.2s ease-out;
+}
+.form_input-background {
+  background-color: #25273c;
+  color: white;
+}
+.form_input:focus {
+  outline: none;
+  border-bottom: 3px solid #cacde8;
+}
+.form_input:focus:invalid {
+  border-bottom: 3px solid white;
+}
+.circle-svg {
+  transform: translateX(1.5rem) translateY(4rem);
+  color: #cacde8;
+  font-weight: 200;
+  height: 2rem;
+  width: 2rem;
+}
+.box {
+  width: 35%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border-radius: 5px;
+  padding-bottom: 2rem;
+}
+@media (max-width: 1100px) {
+  .box {
+    width: 40%;
+  }
+}
+@media (max-width: 800px) {
+  .box {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  .box {
+    width: 92%;
+  }
+}
+.color-light {
+  background-color: white;
+  color: #484b6a;
+}
+.color-dark {
+  background-color: #25273c;
+  color: #cacde8;
+}
+.item {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+.item-clear-completed {
+  word-spacing: -1.1px;
+}
+.font {
+  font-size: 1.5rem;
+  color: #777a92;
+}
+.font:hover {
+  cursor: pointer;
+  color: #e4e5f1;
+}
+.new-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+}
+.new-item svg {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: 1;
+}
+.heading {
+  margin-left: 2rem;
+  font-weight: 300;
+}
+.hr {
+  height: 0.1px;
+  display: block;
+  width: 100%;
+  background-color: #646782;
+  margin: 1rem 0;
+}
+.hr-light {
+  background-color: #e4e5f1;
+}
+input[type=checkbox] {
+  display: none;
+}
+label {
+  position: relative;
+  display: block;
+  border: 1px solid #393a4c;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  transform: translateX(-3px);
+}
+label:hover {
+  cursor: pointer;
+  border: 1px solid #3a7bfd;
+}
+label::after {
+  content: "";
+  position: absolute;
+  background-image: url(icon-check.abab8798.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  transform: rotateZ(15deg) scale(10) translateY(3px);
+}
+input[type=checkbox]:checked + label::after {
+  opacity: 1;
+  transform: translate(-2px, -2px) rotateZ(15deg) scale(1);
+  background-color: blue;
+  height: 26px;
+  width: 26px;
+  display: block;
+}
+input[type=checkbox]:checked ~ h1 {
+  text-decoration: line-through;
+  color: #484b6a;
+}
+.active {
+  color: #3a7bfd;
+}
+/*# sourceMappingURL=index.46a73b80.css.map */
